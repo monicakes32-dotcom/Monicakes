@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Oswald:wght@400;500;600;700&display=swap');
+
+/* --- ESTILOS GENERALES Y FUENTES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #FFFFFF; 
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER Y MENÚ (NO FIJO - ESTÁNDAR) --- */
+.header {
+    padding: 0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #eee; 
+    min-height: auto; 
+    transition: box-shadow 0.3s, padding 0.3s;
+}
+.header:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.menu {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0; 
+    width: 100%; 
+}
+
+.navbar {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.menu .navbar ul {
+    display: flex;
+    margin: 0 auto; 
+    padding: 0;
+}
+
+/* Reducción de los enlaces para compactación */
+.menu .navbar ul li a {
+    font-size: 16px; 
+    padding: 7px 12px; 
+    color: #333333; 
+    display: block;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu .navbar ul li a:hover {
+    color: #FF69B4; 
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+    padding-right: 10px; 
+}
+
+/* --- CONTADOR DEL CARRITO --- */
+.submenu .contador {
+    position: absolute;
+    top: 3px; 
+    right: 0px;
+    background-color: #FF69B4;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+}
+/* Si es 0, ocultarlo */
+.submenu .contador:empty {
+    display: none;
+}
+
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.95); 
+    border: 1px solid #FF69B4; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    min-width: 450px;
+}
+
+table {
+    width: 100%;
+}
+table td, table th {
+    padding: 8px 12px;
+    color: #333333; 
+}
+#carrito table th {
+    border-bottom: 2px solid #FF69B4;
+}
+
+.borrar {
+    background-color: #ff4d4d; 
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* --- BOTONES (ACENTO ROSA) --- */
+.btn-1, .btn-2 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF69B4; 
+    color: #FFFFFF;
+    border-radius: 25px; 
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-1:hover, .btn-2:hover {
+    background-color: #ff3399; 
+    transform: translateY(-2px); 
+}
+
+#ir-a-checkout {
+    margin-top: 10px;
+    background-color: #128c4a; 
+}
+#ir-a-checkout:hover {
+    background-color: #128c4a;
+    transform: scale(1.05);
+}
+
+/* --- ESTILO DE LA SECCIÓN PRINCIPAL (HEADER-CONTENT) --- */
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 50px 20px; 
+    min-height: 400px; 
+    width: 100%; 
+}
+
+.header-txt {
+    flex-basis: 100%; 
+    text-align: center;
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.header-txt h1 {
+    font-size: 75px; 
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: #333333;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 15px;
+}
+
+.header-txt p {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* --- SECCIÓN DE OFERTAS/CATEGORÍAS (OFERT) --- */
+.ofert {
+    padding: 50px 0; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.ofert-1 {
+    display: flex;
+    align-items: center;
+    flex-basis: calc(33.3% - 15px);
+    background-color: #f7f7f7; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    padding: 25px;
+    transition: box-shadow 0.3s;
+}
+.ofert-1:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ofert-img {
+    flex-basis: 50%;
+    margin-right: 15px;
+}
+
+.ofert-img img {
+    width: 100%;
+}
+
+.ofert-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.ofert-txt h3 {
+    color: #FF69B4; 
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* --- SECCIÓN DE PRODUCTOS (MAIN) --- */
+.products {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.products h2 {
+    color: #111111;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px; 
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 50px;
+    width: 100%; 
+    justify-content: space-between; 
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+    box-sizing: border-box; 
+    width: 100%; 
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    transition: transform 0.3s;
+    background-color: #FFFFFF;
+}
+
+.product:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+    /* CORRECCIÓN IMAGEN FINAL: Aseguramos uniformidad visual */
+    width: 80%; 
+    height: 300px; 
+    object-fit: cover; /* Garantiza que la caja se vea llena, eliminando márgenes/triángulos */
+    
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none !important; 
+    padding: 0 !important; 
+    background-color: transparent; 
+}
+
+.product h3 {
+    font-size: 20px;
+    color: #111111;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 20px;
+    color: #FF69B4; 
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+/* --- SECCIÓN DE ICONOS DE SERVICIO (CORRECCIÓN) --- */
+.icons {
+    padding: 50px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Asegura que los iconos estén alineados arriba */
+}
+
+.icon-1 {
+    flex-basis: calc(33.3% - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #FF69B4; 
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+.icon-txt h3 {
+    font-size: 20px;
+    color: #FF69B4;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.icon-txt p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* --- SECCIÓN DE BLOG --- */
+.blog {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.blog-1 {
+    /* Ajuste para que las tres columnas se repartan equitativamente */
+    flex-basis: calc(33.33% - 20px); 
+    margin-bottom: 30px;
+}
+
+.blog-1 img {
+    /* CORRECCIÓN BLOG: Tamaños fijos para el blog para evitar desbordamiento */
+    width: 200%;
+    height: 300px; 
+    object-fit: cover; /* Asegura que la caja se llene sin distorsión (Soluciona Bodas) */
+    
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.blog-1 h3 {
+    font-size: 20px;
+    color: #333333;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.blog-1 p {
+    font-size: 15px;
+    color: #666;
+}
+
+/* --- OCULTAR ELEMENTO FLOTANTE ROTO (Preguntas Frecuentes) --- */
+.frecuentes-flotante {
+    display: none !important;
+}
+
+
+/* --- FOOTER (Alineación Corregida) --- */
+.footer {
+    padding: 50px 0;
+    background-color: #333333; 
+}
+
+.footer-content {
+    /* CORRECCIÓN: Usamos GRID para la alineación perfecta de las 4 columnas */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+    text-align: left; 
+}
+
+.footer-content .link {
+    width: 100%; 
+    min-width: auto; 
+    box-sizing: border-box;
+    padding: 0; 
+}
+
+.link h3 {
+    font-size: 20px;
+    color: #FF69B4;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.link a {
+    font-size: 14px;
+    color: #CCCCCC;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.link a:hover {
+    color: #FFFFFF;
+}
+
+.footer .link ul li a i {
+    margin-right: 8px;
+    color: #FF69B4; 
+}
+
+
+/* --- Dropdown (Submenú) --- */
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown-menu {
+    /* Oculto por defecto */
+    display: none !important; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFFFFF;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.navbar .dropdown-menu li a {
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+
+.navbar .dropdown-menu li a:hover {
+    background-color: #f7f7f7;
+    color: #FF69B4;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- WHATSAPP FLOAT --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.whatsapp-float i {
+    font-size: 20px;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c4a;
+    transform: scale(1.1);
+}
+
+/* --- BOTÓN DE SUBIR --- */
+.btn-arriba {
+    position: fixed;
+    bottom: 80px; 
+    right: 20px;
+    background-color: #111;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    z-index: 1000;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+.btn-arriba:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+/* --- MODALES (CORREGIDO PARA CIERRE EXTERNO) --- */
+.modal {
+    display: none !important; 
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 10000; 
+    
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Regla para que el contenido REAL del modal no ocupe toda pantalla */
+.modal .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    max-height: 90vh; 
+    overflow-y: auto; 
+}
+
+
+.modal.active {
+    display: flex !important; 
+}
+
+.modal .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+/* --- CSS ESPECÍFICO DE CHECKOUT (pedido.html) --- */
+.checkout-grid {
+    /* CORRECCIÓN FINAL: Forzamos el diseño de 2 columnas en desktop */
+    display: flex !important; 
+    gap: 40px; 
+    align-items: flex-start;
+    padding: 40px 0;
+}
+
+#resumen-carrito {
+    flex: 1.5; 
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border: 1px solid #ddd;
+    border: 1px solid #FF69B4; 
+}
+
+#resumen-carrito h3 {
+    border-bottom: 2px solid #FF69B4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.datos-pedido {
+    flex: 1; 
+    background-color: #f7f7f7; 
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.datos-pedido label {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.datos-pedido input[type="text"], 
+.datos-pedido textarea, 
+.datos-pedido input[type="date"], 
+.datos-pedido input[type="time"] { 
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.datos-pedido input:focus, 
+.datos-pedido textarea:focus {
+    border-color: #FF69B4; 
+    outline: none;
+}
+
+.datos-pedido h3 {
+    font-size: 20px;
+    color: #111111;
+    border-bottom: 2px solid #FF69B4; 
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* NUEVA REGLA: AGRUPAR FECHA Y HORA */
+.fecha-hora-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.fecha-hora-group .input-half {
+    flex: 1; 
+}
+
+/* --- Media Query para móviles (Optimización) --- */
+@media (max-width: 991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #FFFFFF;
+        display: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu .navbar ul li a {
+        color: #333;
+        padding: 15px 20px;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    
+    .logo {
+        font-size: 25px;
+    }
+
+    /* CORRECCIÓN UX: Carrito flotante en móvil */
+    .submenu:hover #carrito {
+        min-width: 95%; 
+        left: 50%;
+        transform: translateX(-50%);
+        box-sizing: border-box; 
+    }
+
+    .header-content {
+        padding: 50px 0;
+    }
+
+    .header-txt h1 {
+        font-size: 50px;
+    }
+    
+    .ofert {
+        padding: 30px 20px;
+        flex-direction: column;
+    }
+    .ofert-1 {
+        margin-bottom: 20px;
+    }
+
+    .products {
+        padding: 30px 20px;
+    }
+
+    .product-content {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 20px;
+    }
+
+    .icons {
+        padding: 30px 20px;
+        flex-direction: column;
+    }
+
+    /* CORRECCIÓN: Evita el desbordamiento horizontal de la imagen del blog */
+    .blog-1 img {
+        width: 100%; /* El original decía 200%, causando desbordamiento */
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .blog {
+        padding: 0 20px 30px 20px;
+        flex-direction: column;
+    }
+    
+    .footer {
+        padding: 30px 0;
+    }
+
+    /* CORRECCIÓN CLAVE: FUERZA EL APILAMIENTO DEL FOOTER (SOLUCIONA EL DESBORDAMIENTO) */
+    .footer-content {
+        /* Fuerza la apilación vertical y anula la cuadrícula de 4 columnas */
+        display: flex;
+        flex-direction: column; 
+        text-align: center;
+        gap: 30px; 
+        /* Asegura que el padding interno no cause scroll horizontal */
+        padding: 0 20px; 
+    }
+    
+    /* CORRECCIÓN UX: Checkout y Fecha/Hora */
+    .checkout-grid {
+        flex-direction: column; 
+        gap: 20px;
+        padding: 20px;
+    }
+    .fecha-hora-group {
+        flex-direction: column; 
+        gap: 0;
+    }
+    
+    .btn-arriba {
+        bottom: 80px;
+    }
+    
+    .whatsapp-float {
+        bottom: 20px;
+    }
+}

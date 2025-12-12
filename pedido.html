@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monicakes - Finalizar Pedido</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">Monicakes❤️</a> 
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="Abrir menú" loading="lazy">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#">Servicios <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="XV.html">XV Años</a></li>
+                            <li><a href="Bodas.html">Bodas</a></li>
+                            <li><a href="niños.html">Infantil</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#redes-sociales">Contacto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="images/car.svg" id="img-carrito" alt="Carrito" loading="lazy">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+        <div class="header-content container" style="display: none;">
+        </div>
+    </header> 
+
+    <main class="checkout-page container" style="padding: 50px 0;">
+        <h2 style="text-align: center; margin-bottom: 30px; font-family: 'Oswald', sans-serif; color: #333;">Resumen de Pedido y Datos de Entrega</h2>
+        
+        <div class="checkout-grid">
+        
+            <div id="resumen-carrito">
+                <h3>📝 Resumen del Pedido</h3>
+                
+                <table id="lista-carrito-checkout" style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cant.</th> 
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody> 
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" style="text-align: right;"><strong>Total:</strong></td>
+                            <td id="total-carrito-checkout">$0.00</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <a href="index.html" class="btn-1" style="display: block; text-align: center; margin-top: 15px; background-color: #333; border-radius: 5px;">⬅️ Volver a Productos</a>
+            </div>
+            
+            <div class="datos-pedido">
+                <h3>📋 Información de Contacto y Entrega</h3>
+                
+                <label for="cliente-nombre">👤 Tu Nombre:</label>
+                <input type="text" id="cliente-nombre" placeholder="Nombre completo" required>
+                <span id="error-nombre" class="error-message"></span>
+                
+                <label for="whatsapp-cliente">📱 Tu WhatsApp (para confirmación):</label>
+                <input type="text" id="whatsapp-cliente" placeholder="Ej: 7681234567" required>
+                <span id="error-whatsapp" class="error-message"></span>
+                
+                <div class="personalizacion-pedido">
+                    <label for="personalizacion">🎨 Personalización del pastel:</label>
+                    <textarea id="personalizacion" placeholder="Ejemplo: Pastel de chocolate, color azul, añadir nombre 'Sofía'" rows="4"></textarea>
+                </div>
+                
+                <label for="lugar-entrega">📍 Lugar de entrega:</label>
+                <input type="text" id="lugar-entrega" placeholder="Ejemplo: Calle 123, Colonia Centro..." required>
+                <span id="error-lugar" class="error-message"></span>
+                
+                <div class="fecha-hora-group">
+                    <div class="input-half">
+                        <label for="fecha-entrega">📅 Fecha de Entrega:</label>
+                        <input type="date" id="fecha-entrega" required> 
+                        <span id="error-fecha" class="error-message"></span>
+                    </div>
+                    <div class="input-half">
+                        <label for="horario-entrega">⏰ Hora Preferida:</label>
+                        <input type="time" id="horario-entrega" required>
+                        <span id="error-hora" class="error-message"></span>
+                    </div>
+                </div>
+                <input type="hidden" id="forma-pago" value="Efectivo">
+                
+                <button id="confirmar-pedido-btn" class="btn-1" style="width: 100%; margin-top: 20px;">✅ Confirmar y Enviar Pedido</button>
+            </div>
+            
+        </div> 
+    </main>
+
+    <footer class="footer">   
+    <div class="footer-content container">
+        <div class="link">
+            <h3>Nosotros</h3>
+            <ul>
+                <li><a href="#" data-id="historia">Historia</a></li>
+                <li><a href="#" data-id="mision">Misión</a></li>
+                <li><a href="#" data-id="vision">Visión</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h3>Servicios</h3>
+            <ul>
+                <li><a href="#" data-id="pasteles">Pasteles personalizados</a></li>
+                <li><a href="#" data-id="eventos">Eventos</a></li>
+                <li><a href="#" data-id="entregas">Entregas</a></li>
+                
+            </ul>
+        </div>
+        <div class="link">
+            <h3>Atención</h3>
+            <ul>
+                <li><a href="#" data-id="preguntas">Preguntas frecuentes</a></li>
+                <li><a href="#" data-id="terminos">Términos</a></li>
+                <li><a href="#" data-id="privacidad">Privacidad</a></li>
+                <li><a href="#" data-id="ayuda">Ayuda</a></li>
+            </ul>
+        </div>
+        <div class="link" id="redes-sociales">
+            <h3>Redes</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/share/16EFHKYGd5/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/TU_USUARIO" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@TU_USUARIO" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    <li><a href="https://wa.me/7681083725" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </div>
+    </div>
+</footer>
+
+
+    <a href="https://wa.me/7681108424" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i> Contáctanos
+    </a>
+    <button id="btn-arriba" class="btn-arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="scrip.js"></script>
+</body>
+</html>

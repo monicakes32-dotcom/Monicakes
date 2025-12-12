@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header class="header category-page">
+        <div class="menu container">
+            <a href="#" class="logo">Monicakes❤️</a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="Abrir menú" loading="lazy">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Fiesta.html">Artículos de Fiesta</a></li>
+                    <li class="dropdown">
+                        <a href="#">Servicios <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="xv.html">XV Años</a></li>
+                            <li><a href="bodas.html">Bodas</a></li>
+                            <li><a href="niños.html">Infantil</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#redes-sociales">Contacto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="images/car.svg" id="img-carrito" alt="Carrito" loading="lazy">
+                        <span id="carrito-contador" class="contador">0</span>
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cant.</th> 
+                                        <th>Subtotal</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4" style="text-align: right;"><strong>Total:</strong></td>
+                                        <td id="total-carrito">$0.00</td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                            <a href="pedido.html" id="ir-a-checkout" class="btn-2">🛒 Continuar</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-content container">
+            <div class="header-img">
+                <img src="images/bob-esponja.png" alt="Pastel temático Bob Esponja" loading="lazy">
+            </div>    
+            <div class="header-txt">
+                <h1>Seccion Infantil</h1>
+                <p>Disfruta los mejores pasteles</p>
+                <a href="#" id="btn-informacion" class="btn-1" data-seccion="infantil">Información</a>
+            </div> 
+        </div>
+    </header>
+    
+    
+
+    <main class="products container" id="lista-1">
+        <h2>Productos</h2>
+
+        <div class="product-content">
+            
+            <div class="product" itemscope itemtype="https://schema.org/Product">
+                <img src="images/Infantil/Inf1.webp" alt="Pastel con tematica de Hello kitty de kilo" loading="lazy" itemprop="image">
+                <div class="product-txt">
+                    <h3 itemprop="name">Pastel con tematica de Hello kitty</h3>
+                    <p itemprop="description">Pastel de kilo</p>
+                    <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">$<span itemprop="price">900</span><meta itemprop="priceCurrency" content="MXN"></p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-1">Agregar al carrito</a>
+                </div>
+            </div>            
+
+            <div class="product">
+                <img src="images/Infantil/Inf2.webp" alt="Pastel con tematica de Hello kitty de 2 pisos" loading="lazy">
+                <div class="product-txt">
+                    <h3>Pastel con tematica de Hello kitty de 2 pisos</h3>
+                    <p>Pastel de kilo y medio</p>
+                    <p class="precio">$1200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-2">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Infantil/Inf3.webp" alt="Pastel con tematica de Kuromi" loading="lazy">
+                <div class="product-txt">
+                    <h3>Pastel con tematica de Kuromi</h3>
+                    <p>Pastel de kilo</p>
+                    <p class="precio">$800</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-3">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Infantil/Inf4.webp" alt="Pastel con tematica de Stitch" loading="lazy">
+                <div class="product-txt">
+                    <h3>Pastel con tematica de Stitch</h3>
+                    <p>pastel de medio kilo</p>
+                    <p class="precio">$460</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-4">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Infantil/Inf5.webp" alt="Pastel con tematica de Hello kitty y cerezas" loading="lazy">
+                <div class="product-txt">
+                    <h3>Pastel con tematica de Hello kitty y cerezas</h3>
+                    <p>Pastel de medio kilo</p>
+                    <p class="precio">$460</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-5">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Infantil/Inf6.webp" alt="Pastel con tematica de Cars" loading="lazy">
+                <div class="product-txt">
+                    <h3>Pastel con tematica de Cars</h3>
+                    <p>Pastel de medio kilo</p>
+                    <p class="precio">$450</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-6">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Infantil/Inf7.webp" alt="Pastel con tematica de Barbie" loading="lazy">
+                <div class="product-txt">
+                    <h3>Pastel con tematica de Barbie</h3>
+                    <p>Pastel de kilo</p>
+                    <p class="precio">$800</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-7">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Infantil/Inf8.webp" alt="Pastel con tematica de Hello kitty pequeño" loading="lazy">
+                <div class="product-txt">
+                    <h3>Pastel con tematica de Hello kitty 2</h3>
+                    <p>Pastel de medio kilo</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-8">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Infantil/inf9.webp" alt="Pastel con tematica Plim Plim" loading="lazy">
+                <div class="product-txt">
+                    <h3>Pastel con tematica Plim Plim</h3>
+                    <p>Pastel mini</p>
+                    <p class="precio">$230</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-9">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Infantil/Inf10.webp" alt="Pastel con tematica Paw Patrol" loading="lazy">
+                <div class="product-txt">
+                    <h3>Pastel con tematica Paw Patrol</h3>
+                    <p>Pastel de paw patrol</p>
+                    <p class="precio">$450</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-10">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Infantil/Inf11.webp" alt="Pastel con tematica Transformers" loading="lazy">
+                <div class="product-txt">
+                    <h3>Pastel con tematica Transformers</h3>
+                    <p>Pastel de medio kilo</p>
+                    <p class="precio">$450</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-11">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Infantil/Inf12.webp" alt="Pastel con tematica Minnie mouse" loading="lazy">
+                <div class="product-txt">
+                    <h3>Pastel con tematica Minnie mouse</h3>
+                    <p>Pastel de kilo  diseño en fondand</p>
+                    <p class="precio">$950</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="infantil-12">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>     
+    </main>
+    <section class="icons container">
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="images/truck.svg" alt="Icono de camión de entrega" loading="lazy">
+            </div>
+            <div class="icon-txt">
+                <h3>Entrega rápida</h3>  
+                <p>Entregamos tu pedido en menos de 24 horas</p>
+            </div>
+        </div>
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="images/ingredientes (1).svg" alt="Icono de ingredientes frescos" loading="lazy">
+            </div>
+            <div class="icon-txt">
+                <h3>Ingredientes frescos</h3>  
+                <p>Solo usamos productos naturales</p>
+            </div>
+        </div>
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="images/insignia.svg" alt="Icono de insignia de calidad" loading="lazy">
+            </div>
+            <div class="icon-txt">
+                <h3>Calidad garantizada</h3>  
+                <p>La mejor repostería de la ciudad</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog container">
+        <div class="blog-1">
+            <img src="images/Blog/Bl1.webp" alt="Tarta con flores" loading="lazy">
+            <h3>El arte detrás de cada pastel</h3>
+            <p>¿Sabías que cada pastel que sale de nuestra cocina tiene una historia? Desde la elección de los ingredientes hasta el último detalle en la decoración, ponemos toda nuestra pasión y creatividad para hacer tus momentos inolvidables.</p>
+
+        </div>
+
+        <div class="blog-1">
+            <img src="images/Blog/Bl2.webp" alt="Persona eligiendo un pastel" loading="lazy">
+            <h3>¿Cómo elegir el pastel perfecto para tu evento?</h3>
+            <p>¿Boda, cumpleaños o evento especial? Te ayudamos a elegir el pastel ideal para que tu celebración sea un éxito. Desde el tamaño hasta los sabores, aquí tienes una guía práctica para no equivocarte en la elección.</p>
+
+        </div>
+
+        <div class="blog-1">
+            <img src="images/Blog/Bl3.webp" alt="Clientes felices" loading="lazy">
+            <h3>Momentos dulces: testimonios reales de nuestros clientes felices</h3>
+            <p>Nos encanta ser parte de tus celebraciones. Aquí te compartimos algunas fotos de clientes que han confiado en nosotros para hacer sus momentos más especiales y dulces.</p>
+
+        </div>
+    </section> 
+
+    <footer class="footer">   
+    <div class="footer-content container">
+        <div class="link">
+            <h3>Nosotros</h3>
+            <ul>
+                <li><a href="#" data-id="historia">Historia</a></li>
+                <li><a href="#" data-id="mision">Misión</a></li>
+                <li><a href="#" data-id="vision">Visión</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h3>Servicios</h3>
+            <ul>
+                <li><a href="#" data-id="pasteles">Pasteles personalizados</a></li>
+                <li><a href="#" data-id="eventos">Eventos</a></li>
+                <li><a href="#" data-id="entregas">Entregas</a></li>
+                
+            </ul>
+        </div>
+        <div class="link">
+            <h3>Atención</h3>
+            <ul>
+                <li><a href="#" data-id="preguntas">Preguntas frecuentes</a></li>
+                <li><a href="#" data-id="terminos">Términos</a></li>
+                <li><a href="#" data-id="privacidad">Privacidad</a></li>
+                <li><a href="#" data-id="ayuda">Ayuda</a></li>
+            </ul>
+        </div>
+        <div class="link" id="redes-sociales">
+            <h3>Redes</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/share/16EFHKYGd5/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/TU_USUARIO" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@TU_USUARIO" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    <li><a href="https://wa.me/7681083725" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/7681083725" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i> Contáctanos
+</a>
+<button id="btn-arriba" class="btn-arriba">
+    <i class="fas fa-arrow-up"></i>
+</button>
+    <script src="scrip.js"></script>
+</body>
+</html>

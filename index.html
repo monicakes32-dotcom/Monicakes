@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monicakes | Pastelería Artesanal de Pedidos Personalizados</title>
+    <meta name="description" content="Monicakes - Pastelería artesanal especializada en pasteles de XV Años, Bodas e Infantiles. ¡Personaliza tu pedido en línea y disfruta de ingredientes frescos!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/", 
+        "@type": "WebSite", 
+        "name": "Monicakes❤️",
+        "url": "http://www.tudominio.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://www.tudominio.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+</head>
+<body>
+
+    <header class="header category-page">
+        
+        <div class="menu container">
+            <a href="index.html" class="logo">Monicakes❤️</a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="Abrir menú" loading="lazy">
+            </label>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Fiesta.html">Artículos de Fiesta</a></li>
+                    <li class="dropdown">
+                        <a href="#">Servicios <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="XV.html">XV Años</a></li>
+                            <li><a href="Bodas.html">Bodas</a></li>
+                            <li><a href="niños.html">Infantil</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#redes-sociales">Contacto</a></li> 
+                </ul>
+            </nav>
+            
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="images/car.svg" id="img-carrito" alt="Carrito" loading="lazy">
+                        <span id="carrito-contador" class="contador">0</span>
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cant.</th> 
+                                        <th>Subtotal</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4" style="text-align: right;"><strong>Total:</strong></td>
+                                        <td id="total-carrito">$0.00</td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                            <a href="pedido.html" id="ir-a-checkout" class="btn-2">🛒 Continuar</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt" style="flex-basis: 100%;">
+                <h1>OFERTAS ESPECIALES</h1>
+                <p>Disfruta los mejores postres</p>
+                <a href="#" id="btn-informacion" class="btn-1" data-seccion="index">Información</a>
+            </div> 
+        </div>
+        
+    </header>
+    
+    <section class="ofert container">
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="images/infantil.png" alt="Pasteles Infantiles" loading="lazy">
+            </div>
+            <div class="ofert-txt">
+                <h3>Seccion Infantil</h3>
+                <a href="niños.html" class="btn-2">Informacion</a>
+            </div>
+        </div>
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="images/Xñera.png" alt="Pasteles de XV años" loading="lazy">
+            </div>
+            <div class="ofert-txt">
+                <h3>Seccion de XV años</h3>
+                <a href="XV.html" class="btn-2">Información</a>
+            </div>
+        </div>
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="images/boda.png" alt="Pasteles de boda" loading="lazy">
+            </div>
+            <div class="ofert-txt">
+                <h3>Seccion de bodas</h3>
+                <a href="Bodas.html" class="btn-2">Información</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="products container" id="lista-1">
+        <h2>Nuestros Postres y Pasteles Más Vendidos</h2>
+
+        <div class="product-content">
+            
+            <div class="product" itemscope itemtype="https://schema.org/Product">
+                <img src="images/Productos/postre1.webp" alt="Tarta de queso Philadelphia" loading="lazy" itemprop="image">
+                <div class="product-txt">
+                    <h3 itemprop="name">Tarta de queso </h3>
+                    <p itemprop="description">de queso philadeplphia</p>
+                    <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">$<span itemprop="price">250</span><meta itemprop="priceCurrency" content="MXN"></p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
+                </div>
+            </div>            
+
+            <div class="product">
+                <img src="images/Productos/postre2.webp" alt="Chocoflan decorado con fruta" loading="lazy">
+                <div class="product-txt">
+                    <h3>Chocoflan</h3>
+                    <p>Decorado con fruta</p>
+                    <p class="precio">$280</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Productos/Postre3.webp" alt="Chocoflan tradicional" loading="lazy">
+                <div class="product-txt">
+                    <h3>Chocoflan</h3>
+                    <p>Tradicional</p>
+                    <p class="precio">$230</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Productos/Postre4.webp" alt="Mini tartas de queso con fresa" loading="lazy">
+                <div class="product-txt">
+                    <h3>Mini tartas de queso</h3>
+                    <p>Con fresa</p>
+                    <p class="precio">$40</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Productos/Postre5.webp" alt="Gelatina de mosaico tradicional" loading="lazy">
+                <div class="product-txt">
+                    <h3>Gelatina de mosaico</h3>
+                    <p>Tradicional</p>
+                    <p class="precio">$280</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Productos/Postre6.webp" alt="Cupcake de chocolate" loading="lazy">
+                <div class="product-txt">
+                    <h3>Cupcake</h3>
+                    <p>De chocolate</p>
+                    <p class="precio">$22</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Productos/Postre7.webp" alt="Roles gourmet tradicionales" loading="lazy">
+                <div class="product-txt">
+                    <h3>Roles gourmet</h3>
+                    <p>Tradicionales</p>
+                    <p class="precio">$40</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="7">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Productos/Postre8.webp" alt="Brownies de chocolate" loading="lazy">
+                <div class="product-txt">
+                    <h3>Brownies</h3>
+                    <p>De chocolate</p>
+                    <p class="precio">$30</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="8">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/Productos/Postre9.webp" alt="Cheescake tradicional con fresas" loading="lazy">
+                <div class="product-txt">
+                    <h3>Cheescake</h3>
+                    <p>tradicional con fresas</p>
+                    <p class="precio">$400</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="9">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>     
+    </main>
+
+    <section class="icons container">
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="images/truck.svg" alt="Icono de camión de entrega" loading="lazy">
+            </div>
+            <div class="icon-txt">
+                <h3>Entrega rápida</h3>  
+                <p>Entregamos tu pedido en menos de 24 horas</p>
+            </div>
+        </div>
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="images/ingredientes (1).svg" alt="Icono de ingredientes frescos" loading="lazy">
+            </div>
+            <div class="icon-txt">
+                <h3>Ingredientes frescos</h3>  
+                <p>Solo usamos productos naturales</p>
+            </div>
+        </div>
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="images/insignia.svg" alt="Icono de insignia de calidad" loading="lazy">
+            </div>
+            <div class="icon-txt">
+                <h3>Calidad garantizada</h3>  
+                <p>La mejor repostería de la ciudad</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog container">
+        <h2 style="font-family: 'Oswald', sans-serif; font-size: 40px; text-transform: uppercase; margin-bottom: 60px; text-align: center; width: 100%;">Guía y Consejos para tu Evento</h2>
+
+        <div class="blog-1">
+            <img src="images/Blog/Bl1.webp" alt="Tarta con flores" loading="lazy">
+            <h3>El arte detrás de cada pastel</h3>
+            <p>¿Sabías que cada pastel que sale de nuestra cocina tiene una historia? Desde la elección de los ingredientes hasta el último detalle en la decoración, nuestros ponemos toda su pasión y creatividad para hacer tus momentos inolvidables.</p>
+
+        </div>
+
+        <div class="blog-1">
+            <img src="images/Blog/Bl2.webp" alt="Persona eligiendo un pastel" loading="lazy">
+            <h3>¿Cómo elegir el pastel perfecto para tu evento?</h3>
+            <p>¿Boda, cumpleaños o evento especial? Te ayudamos a elegir el pastel ideal para que tu celebración sea un éxito. Desde el tamaño hasta los sabores</p>
+        </div>
+
+        <div class="blog-1">
+            <img src="images/Blog/Bl3.webp" alt="Clientes felices" loading="lazy">
+            <h3>Momentos dulces: testimonios reales de nuestros clientes felices</h3>
+            <p>Nos encanta ser parte de tus celebraciones. Aquí te compartimos algunas historias y fotos de clientes que han confiado en nosotros para hacer sus momentos más especiales y dulces.</p>
+
+        </div>
+    </section> 
+
+    <footer class="footer">   
+    <div class="footer-content container">
+        <div class="link">
+            <h3>Nosotros</h3>
+            <ul>
+                <li><a href="#" data-id="historia">Historia</a></li>
+                <li><a href="#" data-id="mision">Misión</a></li>
+                <li><a href="#" data-id="vision">Visión</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h3>Servicios</h3>
+            <ul>
+                <li><a href="#" data-id="pasteles">Pasteles personalizados</a></li>
+                <li><a href="#" data-id="eventos">Eventos</a></li>
+                <li><a href="#" data-id="entregas">Entregas</a></li>
+                
+            </ul>
+        </div>
+        <div class="link">
+            <h3>Atención</h3>
+            <ul>
+                <li><a href="#" data-id="preguntas">Preguntas frecuentes</a></li>
+                <li><a href="#" data-id="terminos">Términos</a></li>
+                <li><a href="#" data-id="privacidad">Privacidad</a></li>
+                <li><a href="#" data-id="ayuda">Ayuda</a></li>
+            </ul>
+        </div>
+        <div class="link" id="redes-sociales">
+            <h3>Redes</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/share/16EFHKYGd5/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/TU_USUARIO" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@TU_USUARIO" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    <li><a href="https://wa.me/7681083725" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/7681083725" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i> Contáctanos
+</a>
+<button id="btn-arriba" class="btn-arriba">
+    <i class="fas fa-arrow-up"></i>
+</button>
+    <script src="scrip.js"></script>
+</body>
+</html>
